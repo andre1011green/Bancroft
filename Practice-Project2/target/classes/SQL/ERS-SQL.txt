@@ -1,0 +1,80 @@
+Log into PostGres Shell:
+Username: root
+Password: Mayday
+
+List databases:
+\l
+
+Connect to a database:
+\c sunnyday 
+
+show tables in database:
+\ dt
+
+describe table:
+\d tickets
+
+DROP TABLE IF EXISTS tickets;
+
+CREATE TABLE tickets
+(
+  ticketid            SERIAL PRIMARY KEY,
+  description         VARCHAR(255) NOT NULL,
+  ticketstatus        VARCHAR(16) NOT NULL,
+  amount              NUMERIC(7,2) NOT NULL,
+  datesubmitted       TIMESTAMP NOT NULL, 
+  dateresolved        TIMESTAMP, 
+  reimbursement_type  VARCHAR(32) NOT NULL,
+  employeeid          NUMERIC(38,0) NOT NULL,
+  CONSTRAINT fk_employ FOREIGN KEY(employeeid) REFERENCES users(employeeid)
+); 
+
+ticketstatus: Approved, Denied, Pending
+reimbursement_type: 'Advertising', 'Business-Trip', 'Background-Check','Continuing-Education', 'Entertainment', 'Equipment', 'Food', 'Legal', 'Lodging', 'Maintenance',  'Office-Expenses', 'Other', 'Telephone', 'Travel', 'Utilities'
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Took Client to industry convention', 'Approved', 750.25, '2024-01-02 9:00:00', null, 'Business-Trip', 1);
+
+INSERT INTO tickets  (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Took Client to industry museum', 'Approved', 150.13, '2024-02-03 10:00:00', null, 'Continuing-Education', 1);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Took Client to business meeting', 'Pending', 1357.19, '2024-02-03 13:15:00', null, 'Business-Trip', 1);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Took Client to night club', 'Denied', 120.11, '2024-03-13 22:15:07', null, 'Entertainment', 1);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Met Client at research facility', 'Pending', 220.09, '2024-03-27 14:51:51', null, 'Continuing-Education', 1);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Recruiting new talent', 'Pending', 1221.19, '2024-04-02 08:30:01', null, 'Advertising', 2);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Make Speech at hiring event', 'Approved', 80.88, '2024-04-21 09:00:00', null, 'Advertising', 2);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Attended out of town legal consultation', 'Approved', 60.03, '2024-04-28 15:30:00', null, 'Legal', 2);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Local phone call to client', 'Denied', 150.27, '2024-04-28 17:30:45', null, 'Telephone', 2);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Purchase Training Supplies', 'Approved', 2531.71, '2024-05-01 17:30:45', null, 'Office-Expenses', 3);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Purchase Online Training Platform', 'Approved', 4950.77, '2024-05-20 11:20:15', null, 'Continuing-Education', 3);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Utilizie Background Service', 'Approved', 3760.66, '2024-05-30 13:00:00', null, 'Background-Check', 3);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Contractor for facility maintenance', 'Approved', 21180.03, '2024-06-01 07:00:00', null, 'Maintenance', 4);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Purchase food for Contractor', 'Pending', 350.50, '2024-06-06 12:00:00', null, 'Food', 4);
+
+INSERT INTO tickets (description, ticketstatus, amount, datesubmitted, dateresolved, reimbursement_type, employeeid)
+VALUES ('Purchase company mobile devices', 'Approved', 7878.50, '2024-06-11 16:20:22', null, 'Equipment', 5);
+
+  

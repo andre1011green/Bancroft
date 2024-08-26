@@ -1,0 +1,77 @@
+/*
+filename: fManagerStyles.css
+author: Andre Long
+description: Control presentation for fManager web pages
+*/
+
+body
+{
+  
+  /* background-image: url("../IMAGES/Caduceus.jpg"); */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-color:#CCCCFF; 
+}
+
+#bigDog
+{
+	border: 1px solid red;
+	width:15%;
+	background-color: rgb(255,20,147, .7);
+	margin:auto;
+}
+
+#AndreTable
+{
+	color:green; 
+	border: 2px solid red;
+	width:100%;
+}
+
+.suckerFish
+{
+	border: 1px solid yellow;
+}
+
+.sonOfSuckerFish
+{
+	border: 1px solid orange;
+	text-align:center;
+	color: #8B0000;
+	font-weight: bold;
+}
+
+th
+{
+	display: table-cell;
+}
+
+#approveOrDenie
+{
+	display:block;
+	text-align:center;
+}
+
+#approveOrDenyForm
+{
+	border-style: solid;
+	border-color: black;
+	text-align:center;
+	width:50%;
+	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#87CEEB;
+}
+
+#Charlie
+{
+	text-align:center;
+	font-size: 20px;
+}
+
+#warn
+{
+	color:#8B0000;
+}

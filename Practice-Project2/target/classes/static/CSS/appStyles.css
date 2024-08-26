@@ -1,0 +1,104 @@
+/*
+filename:   appStyles.css
+author:     Andre Long
+description: This is the main styling sheet for the Reimburstment application
+*/
+
+html
+{
+    width: 100%;
+}
+
+body
+{
+   background-image: url("../IMAGES/sky-cloud.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+     /* background-color: #5F9EA0; */
+}
+
+#loginDiv
+{
+    background-color: #ff00cc;
+    width: 25%;
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+    box-shadow: 5px 5px 10px #999;
+    background: linear-gradient(HotPink, yellow);
+}
+
+h1
+{
+   text-align: center;
+   color:#B22222;
+}
+
+h2
+{
+   color: #F0FFFF;
+}
+
+#userInfo
+{
+   border-color:#FF8C00;
+   border-width: thin;
+   border-style: solid;
+}
+
+#AndreTable
+{
+	color:black;
+	border: 1px solid #663399;
+	width:100%;
+	background-color:#FF4500;
+}
+
+.suckerFish
+{
+	border: 2px solid yellow;
+}
+
+.sonOfSuckerFish
+{
+	border: 1px solid black;
+	text-align:center;
+	font-weight: bold;
+	color:#8B0000;
+	background-color: #7FFFD4;
+}
+
+th
+{
+	display: table-cell;
+}
+
+#username, #password, #ticketid, #description, #ticketstatus, #amount, #datesubmitted, #dateresolved, #tType, #employeeid, #reimbursementtype
+ {
+ 	color:#000000;
+ }
+
+
+
+ #newTicket
+ {
+    border: 1px solid red;
+    width:75%;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: black;
+    margin:auto;
+ }
+
+ #editTicket
+ {
+     border: 1px solid gold;
+     width:75%;
+     background-color: rgba(192,192,192,0.8);
+     color: black;
+     margin:auto;
+ }
+
+
+
+

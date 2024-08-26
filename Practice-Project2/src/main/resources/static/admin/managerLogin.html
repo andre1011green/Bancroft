@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ERS MAnager Login</title>
+<link rel="stylesheet" href="../CSS/fManagerStyles.css">
+    <link rel="icon" type="image/x-icon" href="../IMAGES/main-logo.png" >
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+</head>
+<body>
+
+<div class="form-center">
+<h1 id="loginHeader">This is the Manager login page for the Employee Reimbursement System</h1>
+
+  <form id="bigDog" name="bigDog" method="post" action="/admin/managerLogin" autocomplete="off" >
+        <label for="Username">Username:</label>
+        <input type="text" id="username" name="username" autocomplete="new-password"><br>
+<!-- autocomplete = "new-password" is used to prevent FireFox from autofilling input fields -->
+        <label for="Managerpassword">Password:</label>&nbsp;
+        <input type="password" id="Managerpassword" name="Managerpassword" autocomplete="new-password"><br>
+
+        <input type="submit" value="Manager Login">
+
+    </form>
+</div>
+
+</body>
+</html> 

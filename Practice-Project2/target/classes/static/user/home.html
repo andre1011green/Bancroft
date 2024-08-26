@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <title>First Fork</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../IMAGES/main-logo.png" >
+    <link rel='stylesheet' type='text/css' href='../CSS/appStyles.css'  >
+</head>
+<body>
+
+
+<div id="welcome">  </div>
+<div id="userInfo"> </div>
+<h1>Your Employee Tickets</h1>
+<div id="MyReimbursements"> </div>
+<h3>To make a new reimbursement ticket fill out the form below</h3>
+
+<form id = "newTicket" method="post" action="addTicket" autocomplete="off">
+    <label for="description1" >Short ticket Description</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="ticketstatus1" >Ticket Status</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="Amount1" >Reimbursement Amount</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="reimbursement_type1" >Reimbursement Type</label><br>
+
+    <input type="text" name="description1" id="description1" size="25" >&nbsp;&nbsp;&nbsp;
+    <input type="text" name="ticketstatus1" id="ticketstatus1" value="Pending" readonly>
+    <input type="number" name="amount1" id="amount1" min="0"  max="10000" step="0.01" size="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <select  name="reimbursement_type1" id="reimbursement_type1" >
+        <option value="advertising">Advertising</option>
+        <option value="businesstrip">Business-Trip</option>
+        <option value="backgroundcheck">Background-Check</option>
+        <option value="continuingeducation">Continuing-Education</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="Equipment">Equipment</option>
+        <option value="food">Food</option>
+        <option value="legal">Legal</option>
+        <option value="Lodging">Lodging</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="officeexpenses">Office-Expenses</option>
+        <option value="other">Other</option>
+        <option value="telephone">Telephone</option>
+        <option value="Travel">Travel</option>
+        <option value="utilities">Utilities</option>
+    </select>&nbsp;&nbsp;
+    <input type="submit" value="New Ticket">
+</form>
+<br>
+<h3>To edit an existing reimbursement ticket fill out the form below</h3>
+<form id = "editTicket" method="post" action="editTicket" autocomplete="off">
+    <label for="ticketid2" >Ticket ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="Description2" >Short ticket Description</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="ticketstatus2" >Ticket Status</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="Amount2" >Reimbursement Amount</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="reimbursement_type2" >Reimbursement Type</label><br>
+
+    <input type="number" name="ticketid2" id="ticketid2">
+    <input type="text" name="description2" id="description2" size="25" >&nbsp;&nbsp;&nbsp;
+    <input type="text" name="ticketstatus2" id="ticketstatus2" value="Pending" readonly>
+    <input type="number" name="amount2" id="amount2" min="0"  max="10000" step="0.01" size="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select  name="reimbursement_type2" id="reimbursement_type2" >
+        <option value="advertising">Advertising</option>
+        <option value="businesstrip">Business-Trip</option>
+        <option value="backgroundcheck">Background-Check</option>
+        <option value="continuingeducation">Continuing-Education</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="Equipment">Equipment</option>
+        <option value="food">Food</option>
+        <option value="legal">Legal</option>
+        <option value="Lodging">Lodging</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="officeexpenses">Office-Expenses</option>
+        <option value="other">Other</option>
+        <option value="telephone">Telephone</option>
+        <option value="Travel">Travel</option>
+        <option value="utilities">Utilities</option>
+    </select>&nbsp;&nbsp;
+    <input type="submit" value="Edit Ticket">
+</form>
+
+<h3>To delete an existing reimbursement ticket enter the ticket ID number below</h3>
+<form id = "deleteTicket" method="post" action="deleteTicket" autocomplete="off">
+    <label for="ticketid3" >Ticket ID</label>
+    <input type="number" name="ticketid3" id="ticketid3">
+    <input type="submit" value="Delete Ticket">
+</form>
+
+
+<script type='text/javascript' src='../JAVASCRIPT/repaymentScript.js'  ></script>
+</body>
+</html>

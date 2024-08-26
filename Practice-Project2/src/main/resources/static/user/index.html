@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Employee Login</title>
+    <link rel='stylesheet' type='text/css' href='../CSS/appStyles.css'  >
+    <link rel="icon" type="image/x-icon" href="../IMAGES/main-logo.png" >
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+<h1 id="loginHeader">This is the user login page for the Employee Reimbursement System</h1>
+<div id = "loginDiv">
+    <form id="andre" name="andre" method="post" action="/user/index" autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <!-- autocomplete = "new-password" is used to prevent FireFox from auto_filling input fields -->
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" autocomplete="new-password"><br>
+
+        <input type="submit" value="Login">
+
+    </form>
+</div>
+</body>
+</html>
